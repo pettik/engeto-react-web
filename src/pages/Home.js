@@ -6,7 +6,7 @@ const Home = () => {
 
   function handleEvent(e) {
     e.preventDefault();
-    setClicks((clicks) => clicks + 1);
+    setClicks(clicks => clicks + 1);
   }
   return (
     <section className="container">
