@@ -1,24 +1,30 @@
-import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Home from './pages/Home';
-import GithubFinder from './pages/GitHubFinder';
 import About from './pages/About';
-import ErrorPage from './pages/Error';
+import GitHubFinder from './pages/GitHubFinder';
 import SharedLayout from './pages/SharedLayout';
+import './App.css';
 
-const App = () => {
+function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<SharedLayout />}>
-          <Route index element={<Home />} />
-          <Route path="/github-profiles" element={<GithubFinder />} />
-          <Route path="/about" element={<About />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <Router>
+      <div className="app-container">
+        <Navbar />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<SharedLayout />}>
+              <Route index element={<Home />} />
+              <Route path="about" element={<About />} />
+              <Route path="github-finder" element={<GitHubFinder />} />
+            </Route>
+          </Routes>
+        </div>
+        <Footer />
+      </div>
+    </Router>
   );
-};
+}
 
 export default App;
