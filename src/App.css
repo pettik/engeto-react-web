@@ -82,3 +82,36 @@ body {
   font-family: 'Roboto', sans-serif;
   min-height: 100vh;
 }
+
+
+/* Globální styl pro minimalní výšku stránky 100vh */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Styl pro obsahovou část, která vyplní zbylý prostor */
+.content {
+  flex: 1;
+}
+
+/* Navbar styl */
+.navbar {
+  height: 6rem;
+  background-color: #333;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    height: 3.5rem;
+  }
+}
+
+/* Footer styl */
+.footer {
+  height: 5rem;
+  background-color: #222;
+  color: white;
+}
