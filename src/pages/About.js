@@ -1,8 +1,8 @@
 const About = () => {
   return (
-    <div>
+    <section className="container">
       <p>Tento projekt vznikl jako bla bla...</p>
-    </div>
+    </section>
   );
 };
 

@@ -1,5 +1,9 @@
-const GithubFinder = () => {
-  return <h2>GithubFinder App</h2>;
+const GitHubFinder = () => {
+  return (
+    <section className="container">
+      <h1>GithubUserFinder</h1>
+    </section>
+  );
 };
 
-export default GithubFinder;
+export default GitHubFinder;

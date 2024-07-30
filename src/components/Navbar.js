@@ -7,12 +7,12 @@ const Navbar = () => {
     <header className="header">
       <div className="nav__container">
         <Link to="/" className="logo">
-          <FaGithub className="logo-icon" /> Github<span>Finder</span>
+          <FaGithub className="logo-icon" /> Github<span>UserFinder</span>
         </Link>
         <nav className="nav">
           <Link to="/">Domů</Link>
           <br />
-          <Link to="/github-profiles">GithubFinder App</Link>
+          <Link to="/github-profiles">GithubUserFinder App</Link>
           <br />
           <Link to="/about">O projektu</Link>
           <br />

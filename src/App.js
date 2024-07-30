@@ -17,7 +17,7 @@ function App() {
             <Route path="/" element={<SharedLayout />}>
               <Route index element={<Home />} />
               <Route path="about" element={<About />} />
-              <Route path="github-finder" element={<GitHubFinder />} />
+              <Route path="github-profiles" element={<GitHubFinder />} />
             </Route>
           </Routes>
         </div>
