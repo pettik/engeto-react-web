@@ -95,23 +95,3 @@ body {
 .content {
   flex: 1;
 }
-
-/* Navbar styl */
-.navbar {
-  height: 6rem;
-  background-color: #333;
-  color: white;
-}
-
-@media (min-width: 768px) {
-  .navbar {
-    height: 3.5rem;
-  }
-}
-
-/* Footer styl */
-.footer {
-  height: 5rem;
-  background-color: #222;
-  color: white;
-}
