@@ -1,20 +1,41 @@
 import './Navbar.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { FaGithub } from 'react-icons/fa6';
 
 const Navbar = () => {
   return (
     <header className="header">
       <div className="nav__container">
-        <Link to="/" className="logo">
+        <NavLink to="/" className="logo">
           <FaGithub className="logo-icon" /> Github<span>UserFinder</span>
-        </Link>
+        </NavLink>
         <nav className="nav">
-          <Link to="/">Domů</Link>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? 'activeLink' : 'nonActiveLink'
+            }
+          >
+            Domů
+          </NavLink>
           <br />
-          <Link to="/github-profiles">GithubUserFinder App</Link>
+          <NavLink
+            to="/github-profiles"
+            className={({ isActive }) =>
+              isActive ? 'activeLink' : 'nonActiveLink'
+            }
+          >
+            GithubUserFinder App
+          </NavLink>
           <br />
-          <Link to="/about">O projektu</Link>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? 'activeLink' : 'nonActiveLink'
+            }
+          >
+            O projektu
+          </NavLink>
           <br />
         </nav>
       </div>

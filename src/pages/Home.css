@@ -1,5 +1,12 @@
+:root {
+  --color-primary-300: #b5d9f3;
+  --color-primary-600: #2362a2;
+  --color-primary-700: #254e80;
+}
+
 .container {
   padding: 1.5rem;
+  max-width: 95vh;
 }
 
 .hero {
@@ -26,26 +33,46 @@
   left: 50%;
   top: 50%;
   transform: translate(-45%, -40%);
+  color: var(--color-primary-700);
 }
 
 .gihub__center__icon {
   width: 100%;
-  positon: absolute;
+  position: absolute;
   font-size: 3rem;
   left: 50%;
   top: 50%;
+  transform: translate(-49.85%, -50%);
+  color: var(--color-primary-600);
 }
 
 h1 {
   font-size: 2rem;
   text-align: center;
+  color: var(--color-primary-600);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+h1 span {
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+h3 span {
+  font-weight: bold;
 }
 
 @media screen and (min-width: 768px) {
   .container {
     border: 1px solid #ccc;
     width: 100%;
-    max-width: 700px;
+    max-width: 900px;
+
     margin: 2rem auto;
   }
 }

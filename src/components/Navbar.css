@@ -1,4 +1,5 @@
 :root {
+  --white: #fff;
   --color-primary-300: #b5d9f3;
   --color-primary-600: #2362a2;
   --color-primary-700: #254e80;
@@ -32,7 +33,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 700px;
+  max-width: 95vh;
   height: 6rem;
   margin: 0 auto;
   padding-left: 1rem;
@@ -50,8 +51,17 @@ a {
   transition: border-bottom 0.2s;
 }
 .nav a:hover {
+  color: var(--color-primary-600);
+  border-bottom: 2px solid var(--color-primary-600);
+}
+
+.activeLink {
   color: var(--color-primary-700);
-  border-bottom: 2px solid var(--color-primary-700);
+  border-bottom: 2px solid var(--color-primary-700) !important;
+}
+
+.nonActiveLink {
+  color: var(--white);
 }
 
 @media screen and (min-width: 768px) {
@@ -63,6 +73,7 @@ a {
     row-gap: 0;
     padding-left: 0;
     padding-right: 0;
+    max-width: 900px;
   }
 
   .nav {
