@@ -78,11 +78,39 @@
   box-sizing: border-box;
 }
 
+:root {
+  --white: #fff;
+  --black: #000;
+  --color-primary-100: #ecf7ff;
+  --color-primary-200: #d9efff;
+  --color-primary-300: #b5d9f3;
+  --color-primary-400: #66a1d8;
+  --color-primary-500: #3077b7;
+  --color-primary-600: #2362a2;
+  --color-primary-700: #254e80;
+  --color-primary-800: #15355e;
+  --color-primary-900: #0d213a;
+
+  --color--secondary-100: #fcfcfc;
+  --color--secondary-200: #fafafa;
+  --color--secondary-300: #f5f5f5;
+  --color--secondary-400: #eaeaea;
+  --color--secondary-500: #ddd;
+  --color--secondary-600: #a8a8a8;
+  --color--secondary-700: #686868;
+  --color--secondary-800: #3b3b3b;
+  --color--secondary-900: #232323;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   min-height: 100vh;
 }
 
+.container {
+  padding: 0.5rem;
+  max-width: 95vh;
+}
 
 /* Globální styl pro minimalní výšku stránky 100vh */
 .app-container {
@@ -94,4 +122,12 @@ body {
 /* Styl pro obsahovou část, která vyplní zbylý prostor */
 .content {
   flex: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 900px;
+  }
 }

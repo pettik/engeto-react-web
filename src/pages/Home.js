@@ -11,7 +11,7 @@ const Home = () => {
     'bezpečná',
     'přesná',
     'intuitivní',
-    'aktuální',
+    'aktualizovaná',
     'efektivní',
   ];
 
