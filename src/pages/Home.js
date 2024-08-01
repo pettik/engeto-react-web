@@ -1,5 +1,5 @@
 import './Home.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { FaMagnifyingGlass } from 'react-icons/fa6';
 import { FiGithub } from 'react-icons/fi';
@@ -16,11 +16,11 @@ const Home = () => {
     'efektivní',
   ];
 
-  const getRandomTitle = () => {
+  const getRandomTitle = useCallback(() => {
     const randomIndex = Math.floor(Math.random() * appProperties.length);
     const word = appProperties[randomIndex];
     return word.charAt(0).toUpperCase() + word.slice(1);
-  };
+  }, []);
 
   const [title, setTitle] = useState(getRandomTitle());
 
