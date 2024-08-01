@@ -26,7 +26,7 @@ const Home = () => {
 
   useEffect(() => {
     setTitle(getRandomTitle());
-  }, []);
+  }, [getRandomTitle]);
 
   return (
     <main className="container">
