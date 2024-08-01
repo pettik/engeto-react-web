@@ -57,6 +57,15 @@ h3 span {
   font-weight: bold;
 }
 
+.btn__magnifying__icon{
+  color:initial;
+}
+
+.btn__home{
+  background-color:var(--color-primary-600);
+  color:var(--white);
+}
+
 @media screen and (min-width: 768px) {
   .container {
     border: 1px solid #ccc;
