@@ -5,10 +5,6 @@ import { FaGithub } from 'react-icons/fa6';
 const Navbar = () => {
   return (
     <header className="header">
-      {/* <!-- Jméno a příjmení: Petr Bednarski -->
-  <!-- E-mail: petrbednarski@seznam.cz -->
-  <!-- Discord: pettik_ (PetrB) -->
-  <!-- Github.com: https://github.com/pettik --> */}
       <div className="nav__container">
         <NavLink to="/" className="logo">
           <FaGithub className="logo-icon" /> Github<span>UserFinder</span>
@@ -29,7 +25,7 @@ const Navbar = () => {
               isActive ? 'activeLink' : 'nonActiveLink'
             }
           >
-            GithubUserFinder App
+            GithubUserFinder Appp
           </NavLink>
           <br />
           <NavLink
