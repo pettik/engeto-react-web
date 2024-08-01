@@ -1,6 +1,6 @@
 import './Home.css';
 import { useState, useEffect } from 'react';
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom';
 import { FaMagnifyingGlass } from 'react-icons/fa6';
 import { FiGithub } from 'react-icons/fi';
 
@@ -41,11 +41,14 @@ const Home = () => {
         <h3>
           <span>{title}</span> aplikace pro vyhledávání Github uživatelů.
         </h3>
-        <button className="btn__home"><Link to="/github-profiles">Vyhledat uživatele <FaMagnifyingGlass className="btn__magnifying__icon" /></Link></button>
+        <button className="btn__home">
+          <Link to="/github-profiles">
+            <span>Vyhledat uživatele</span>
+            <FaMagnifyingGlass className="btn__magnifying__icon" />
+          </Link>
+        </button>
       </section>
-      <section className="benefits__section">
-
-      </section>
+      <section className="benefits__section"></section>
     </main>
   );
 };
