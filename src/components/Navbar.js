@@ -25,7 +25,7 @@ const Navbar = () => {
               isActive ? 'activeLink' : 'nonActiveLink'
             }
           >
-            GithubUserFinder Appp
+            GithubUserFinder App
           </NavLink>
           <br />
           <NavLink
