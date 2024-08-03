@@ -28,13 +28,13 @@ const Home = () => {
       icon: <FaSearch />, // Ikona pro rychlé vyhledávání
       title: 'Rychlé vyhledávání',
       description:
-        'Najděte GitHub účty během několika vteřin pomocí našeho výkonného vyhledávacího nástroje.',
+        'Najděte GitHub účty během několika vteřin pomocí našeho vyhledávacího nástroje.',
     },
     {
       icon: <FaInfoCircle />, // Ikona pro detailní informace
       title: 'Detailní profily',
       description:
-        'Získejte přehledné a detailní informace o jednotlivých uživatelích, včetně jejich projektů a příspěvků.',
+        'Získejte přehledné a detailní informace o uživatelích, včetně jejich projektů a příspěvků.',
     },
     {
       icon: <FaUserFriends />, // Ikona pro uživatelsky přívětivé rozhraní
