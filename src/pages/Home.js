@@ -55,6 +55,7 @@ const Home = () => {
       <div className="benefit-icon">{icon}</div>
       <h3>{title}</h3>
       <p>{description}</p>
+      <div className="bottom_line"></div>
     </div>
   );
 
