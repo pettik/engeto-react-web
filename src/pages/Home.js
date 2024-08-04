@@ -98,7 +98,7 @@ const Home = () => {
       <section className="benefits__section">
         <div className="benefits__container">
           {benefits.map((benefit, index) => (
-            <BenefffitItem
+            <BenefitItem
               key={index}
               icon={benefit.icon}
               title={benefit.title}
