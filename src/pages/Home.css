@@ -122,7 +122,11 @@ h3 span {
   height: 1.5px;
   width: 85%;
   margin: 2rem auto 0;
-  background-color: var(--color-primary-700);
+  background-color: var(--color--secondary-400);
+}
+
+.benefit-item:last-child .bottom_line {
+  display: none;
 }
 
 .benefit-icon {
@@ -164,7 +168,7 @@ h3 span {
     flex-direction: row;
     column-gap: 1.25rem;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 4rem 0;
   }
 
   .benefit-item {
