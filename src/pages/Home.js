@@ -83,7 +83,7 @@ const Home = () => {
     {
       id: 2,
       title: 'Jak používat GithubUserFinder?',
-      info: 'Zadejte uživatelské jméno na GitHubu do vyhledávacího formuláře a aplikace zobrazí detailní informace o uživateli.',
+      info: 'Zadejte uživatelské jméno uživatele z GitHubu do vyhledávacího pole formuláře a klikněte na tlačítko načíst. Aplikace Vám zobrazí detailní informace o uživateli.',
     },
     {
       id: 3,

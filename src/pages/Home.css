@@ -279,7 +279,8 @@ h3 span {
   }
 
   .faq-item h3 {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    font-weight: 800;
     margin-bottom: 0;
   }
 }
