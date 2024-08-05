@@ -138,21 +138,26 @@ const Home = () => {
       {/* FAQ SECTION */}
       <section className="faq__section">
         <div className="faq__container">
-          {questions.map((question, index) => (
-            <div
-              key={index}
-              className="question-item"
-              onClick={() => setActiveQuestion(question)}
-            >
-              <h3>{question.title}</h3>
-            </div>
-          ))}
-        </div>
-        {activeQuestion && (
-          <div className="question-info">
-            <p>{activeQuestion.info}</p>
+          <div className="faq__tabs">
+            {questions.map((question, index) => (
+              <div
+                key={index}
+                className="faq-item"
+                onClick={() => setActiveQuestion(question)}
+              >
+                <h3>{question.title}</h3>
+              </div>
+            ))}
           </div>
-        )}
+          <div className="faq__answers">
+            {activeQuestion && (
+              <div className="faq-info">
+                <p>{activeQuestion.title}</p>
+                <p>{activeQuestion.info}</p>
+              </div>
+            )}
+          </div>
+        </div>
       </section>
     </main>
   );

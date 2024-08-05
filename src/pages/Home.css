@@ -140,18 +140,59 @@ h3 span {
 
 /* FAQ SECTION */
 .faq__section {
-  width: 100vw;
+  width: 98vw;
   background-color: var(--white);
 }
 
 .faq__container {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   row-gap: 2rem;
-  max-width: 900px;
-  padding-block: 3rem;
+  max-width: 80%;
+  margin: 2rem auto;
+}
+
+.faq__tabs {
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 0.25rem;
+  width: 100%;
+}
+
+.faq-item {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  border: 1px solid var(--color-primary-600);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.faq-item:hover {
+  background-color: var(--color-primary-300);
+}
+.faq-item h3 {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.faq__answers {
+  width: 100%;
+}
+
+.faq-info {
+  display: inline-block;
+  padding: 1rem;
+  background-color: var(--white);
+  border: 1px solid var(--color-primary-600);
+  border-radius: 0.5rem;
+  width: 100%;
+  text-align: left;
 }
 
 @media screen and (min-width: 768px) {
@@ -217,52 +258,18 @@ h3 span {
     display: none;
   }
 
-  /* FAQ section */
-  .faq__section {
-    width: 100%;
-  }
-
-  .faq__container {
-    flex-direction: row;
-    column-gap: 1.25rem;
-    margin: 0 auto;
-    padding: 4rem 0;
-  }
-
   /* FAQ SECTION */
-  .questions__section {
-    width: 100vw;
-    background-color: var(--color--secondary-300);
-    padding: 2rem 0;
+  .faq__container {
+    width: 90%;
+    max-width: 900px;
   }
 
-  .questions__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .faq__tabs {
+    column-gap: 1.25rem;
   }
 
-  .question-item {
-    padding: 1rem;
-    margin: 0.5rem 0;
-    background-color: var(--white);
-    border: 1px solid var(--color-primary-400);
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-
-  .question-item:hover {
-    background-color: var(--color-primary-100);
-  }
-
-  .question-info {
-    margin-top: 2rem;
-    padding: 1rem;
-    background-color: var(--white);
-    border: 1px solid var(--color-primary-400);
-    border-radius: 0.5rem;
-    max-width: 800px;
-    text-align: center;
+  .faq-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0;
   }
 }
