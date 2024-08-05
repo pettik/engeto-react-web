@@ -97,18 +97,7 @@ const Home = () => {
     },
   ];
 
-  const Question = ({ title, info }) => {
-    const [show, setShow] = useState(false);
-
-    return (
-      <div className="question">
-        <div className="question-title" onClick={() => setShow(!show)}>
-          <h2>{title}</h2>
-        </div>
-        {show && <p className="question-info">{info}</p>}
-      </div>
-    );
-  };
+  const [activeQuestion, setActiveQuestion] = useState(null);
 
   return (
     <main className="container">
@@ -146,15 +135,24 @@ const Home = () => {
           ))}
         </div>
       </section>
-    {/* FAQ SECTION */}
+      {/* FAQ SECTION */}
       <section className="faq__section">
         <div className="faq__container">
-          <div className="faq-tabs">
-            {questions.map((oneQuestion) => {
-              return <Question key={oneQuestion.id} {...oneQuestion} />;
-            })}
-          </div>
+          {questions.map((question, index) => (
+            <div
+              key={index}
+              className="question-item"
+              onClick={() => setActiveQuestion(question)}
+            >
+              <h3>{question.title}</h3>
+            </div>
+          ))}
         </div>
+        {activeQuestion && (
+          <div className="question-info">
+            <p>{activeQuestion.info}</p>
+          </div>
+        )}
       </section>
     </main>
   );
