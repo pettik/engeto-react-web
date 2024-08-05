@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import GitHubFinder from './pages/GitHubFinder';
+import Error from './pages/Error';
 import SharedLayout from './pages/SharedLayout';
 import './App.css';
 
@@ -18,6 +19,7 @@ function App() {
               <Route index element={<Home />} />
               <Route path="about" element={<About />} />
               <Route path="github-profiles" element={<GitHubFinder />} />
+              <Route path="*" element={<Error />} />
             </Route>
           </Routes>
         </div>
