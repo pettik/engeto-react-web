@@ -101,10 +101,11 @@ const Home = () => {
     const [show, setShow] = useState(false);
 
     return (
-      <div>
-        <h2>{title}</h2>
-        <button onClick={() => setShow(!show)}>Odpověď</button>
-        {show && <p>{info}</p>}
+      <div className="question">
+        <div className="question-title" onClick={() => setShow(!show)}>
+          <h2>{title}</h2>
+        </div>
+        {show && <p className="question-info">{info}</p>}
       </div>
     );
   };
@@ -145,12 +146,14 @@ const Home = () => {
           ))}
         </div>
       </section>
-      {/* FAQ SECTION */}
+    {/* FAQ SECTION */}
       <section className="faq__section">
         <div className="faq__container">
-          {questions.map((oneQuestion) => {
-            return <Question key={oneQuestion.id} {...oneQuestion} />;
-          })}
+          <div className="faq-tabs">
+            {questions.map((oneQuestion) => {
+              return <Question key={oneQuestion.id} {...oneQuestion} />;
+            })}
+          </div>
         </div>
       </section>
     </main>
