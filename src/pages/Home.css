@@ -228,4 +228,52 @@ h3 span {
     margin: 0 auto;
     padding: 4rem 0;
   }
+
+  /* FAQ SECTION */
+.faq__section {
+  padding: 50px 20px;
+  background-color: #16213e;
+  color: white;
+}
+
+.faq__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.faq-tabs button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.faq-tabs button:hover,
+.faq-tabs button.active {
+  background-color: #0f3460;
+  border-radius: 5px;
+}
+
+.question {
+  background-color: #0f3460;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.question-title {
+  cursor: pointer;
+}
+
+.question-info {
+  margin-top: 10px;
+}
 }
