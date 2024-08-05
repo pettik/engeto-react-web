@@ -11,6 +11,7 @@ import {
 
 import { FiGithub } from 'react-icons/fi';
 
+// HERO SECTION
 const Home = () => {
   const appProperties = [
     'rychlá',
@@ -23,27 +24,40 @@ const Home = () => {
     'efektivní',
   ];
 
+  const getRandomTitle = useCallback(() => {
+    const randomIndex = Math.floor(Math.random() * appProperties.length);
+    const word = appProperties[randomIndex];
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  }, []);
+
+  const [title, setTitle] = useState(getRandomTitle());
+
+  useEffect(() => {
+    setTitle(getRandomTitle());
+  }, []);
+
+  // BENEFITS SECTION
   const benefits = [
     {
-      icon: <FaSearch />, // Ikona pro rychlé vyhledávání
+      icon: <FaSearch />,
       title: 'Rychlé vyhledávání',
       description:
         'Najděte GitHub účty během několika vteřin pomocí našeho vyhledávacího nástroje.',
     },
     {
-      icon: <FaInfoCircle />, // Ikona pro detailní informace
+      icon: <FaInfoCircle />,
       title: 'Detailní profily',
       description:
         'Získejte přehledné a detailní informace o uživatelích, včetně jejich projektů a příspěvků.',
     },
     {
-      icon: <FaUserFriends />, // Ikona pro uživatelsky přívětivé rozhraní
+      icon: <FaUserFriends />,
       title: 'Jednoduché a intuitivní',
       description:
         'Uživatelsky přívětivé rozhraní, které je snadné používat pro všechny úrovně zkušeností.',
     },
     {
-      icon: <FaSyncAlt />, // Ikona pro aktualizované údaje
+      icon: <FaSyncAlt />,
       title: 'Aktualizované údaje',
       description:
         'Vždy aktuální informace přímo z GitHub API, abyste měli přístup k nejnovějším údajům.',
@@ -59,17 +73,41 @@ const Home = () => {
     </div>
   );
 
-  const getRandomTitle = useCallback(() => {
-    const randomIndex = Math.floor(Math.random() * appProperties.length);
-    const word = appProperties[randomIndex];
-    return word.charAt(0).toUpperCase() + word.slice(1);
-  }, []);
+  // FAQ SECTION
+  const questions = [
+    {
+      id: 1,
+      title: 'aaa',
+      info: 'AAA',
+    },
+    {
+      id: 2,
+      title: 'bbb',
+      info: 'BBB',
+    },
+    {
+      id: 3,
+      title: 'ccc',
+      info: 'CCC',
+    },
+    {
+      id: 4,
+      title: 'ddd',
+      info: 'DDD',
+    },
+  ];
 
-  const [title, setTitle] = useState(getRandomTitle());
+  const Question = ({ title, info }) => {
+    const [show, setShow] = useState(false);
 
-  useEffect(() => {
-    setTitle(getRandomTitle());
-  }, []);
+    return (
+      <div>
+        <h2>{title}</h2>
+        <button onClick={() => setShow(!show)}>Odpověď</button>
+        {show && <p>{info}</p>}
+      </div>
+    );
+  };
 
   return (
     <main className="container">
@@ -105,6 +143,14 @@ const Home = () => {
               description={benefit.description}
             />
           ))}
+        </div>
+      </section>
+      {/* FAQ SECTION */}
+      <section className="faq__section">
+        <div className="faq__container">
+          {questions.map((oneQuestion) => {
+            return <Question key={oneQuestion.id} {...oneQuestion} />;
+          })}
         </div>
       </section>
     </main>
