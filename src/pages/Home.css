@@ -150,7 +150,7 @@ h3 span {
   justify-content: center;
   align-items: center;
   row-gap: 2rem;
-  max-width: 80%;
+  max-width: 90%;
   margin: 2rem auto;
 }
 
@@ -162,7 +162,7 @@ h3 span {
 }
 
 .faq-item {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -176,8 +176,13 @@ h3 span {
 .faq-item:hover {
   background-color: var(--color-primary-300);
 }
+
+.faq-item.active {
+  background-color: var(--color-primary-300);
+}
+
 .faq-item h3 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-bottom: 0;
 }
 
@@ -193,6 +198,11 @@ h3 span {
   border-radius: 0.5rem;
   width: 100%;
   text-align: left;
+  line-height: 1.5;
+}
+
+.faq-info h4 {
+  margin-bottom: 0.5rem;
 }
 
 @media screen and (min-width: 768px) {

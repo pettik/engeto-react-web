@@ -77,23 +77,23 @@ const Home = () => {
   const questions = [
     {
       id: 1,
-      title: 'aaa',
-      info: 'AAA',
+      title: 'Co je GithubUserFinder?',
+      info: 'GithubUserFinder je aplikace pro vyhledávání uživatelů na GitHubu, vytvořená jako závěrečný projekt kurzu "React" na Engeto.cz.',
     },
     {
       id: 2,
-      title: 'bbb',
-      info: 'BBB',
+      title: 'Jak používat GithubUserFinder?',
+      info: 'Zadejte uživatelské jméno na GitHubu do vyhledávacího formuláře a aplikace zobrazí detailní informace o uživateli.',
     },
     {
       id: 3,
-      title: 'ccc',
-      info: 'CCC',
+      title: 'Jak funguje úvodní stránka?',
+      info: 'Úvodní stránka obsahuje dynamický text, který se mění náhodně při každém načtení stránky.',
     },
     {
       id: 4,
-      title: 'ddd',
-      info: 'DDD',
+      title: 'Jaké technologie jsou použity?',
+      info: 'Aplikace je postavena pomocí Reactu a využívá GitHub API pro získávání dat o uživatelích.',
     },
   ];
 
@@ -142,7 +142,9 @@ const Home = () => {
             {questions.map((question, index) => (
               <div
                 key={index}
-                className="faq-item"
+                className={`faq-item ${
+                  activeQuestion?.id === question.id ? 'active' : ''
+                }`}
                 onClick={() => setActiveQuestion(question)}
               >
                 <h3>{question.title}</h3>
@@ -152,7 +154,7 @@ const Home = () => {
           <div className="faq__answers">
             {activeQuestion && (
               <div className="faq-info">
-                <p>{activeQuestion.title}</p>
+                <h4>{activeQuestion.title}</h4>
                 <p>{activeQuestion.info}</p>
               </div>
             )}
