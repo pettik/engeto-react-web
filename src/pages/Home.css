@@ -138,6 +138,22 @@ h3 span {
   color: var(--color-primary-700);
 }
 
+/* FAQ SECTION */
+.faq__section {
+  width: 100vw;
+  background-color: var(--white);
+}
+
+.faq__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 2rem;
+  max-width: 900px;
+  padding-block: 3rem;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     width: 100vw;
@@ -199,5 +215,17 @@ h3 span {
 
   .bottom_line {
     display: none;
+  }
+
+  /* FAQ section */
+  .faq__section {
+    width: 100%;
+  }
+
+  .faq__container {
+    flex-direction: row;
+    column-gap: 1.25rem;
+    margin: 0 auto;
+    padding: 4rem 0;
   }
 }
