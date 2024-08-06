@@ -142,7 +142,7 @@ const Home = () => {
             {questions.map((question, index) => (
               <div
                 key={index}
-                className={`faq-item ${
+                className={`faq__item ${
                   activeQuestion?.id === question.id ? 'active' : ''
                 }`}
                 onClick={() => setActiveQuestion(question)}
@@ -153,7 +153,7 @@ const Home = () => {
           </div>
           <div className="faq__answers">
             {activeQuestion && (
-              <div className="faq-info">
+              <div className="faq__info">
                 <h4>{activeQuestion.title}</h4>
                 <p>{activeQuestion.info}</p>
               </div>
