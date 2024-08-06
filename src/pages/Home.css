@@ -201,7 +201,7 @@ h3 span {
   color: var(--white);
   border: none;
   outline: none;
-  background: linear-gradient(135deg, var(--color--primary-400) 60%, var(--color--primary-700));
+  background: linear-gradient(135deg, #66a1d8 60%, #254e80);
   border-radius: 0.5rem;
   width: 100%;
   text-align: left;
