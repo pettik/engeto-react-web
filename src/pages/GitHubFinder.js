@@ -19,7 +19,12 @@ const GitHubFinder = () => {
   })
 
   if (loading) {
-    return <h2>Načítání stránky...</h2>
+    
+    return <section className="container">
+            <div className="container__app">
+              <h2 className="loading_heading">Načítání stránky...</h2>
+            </div>
+          </section>
   }
 
 
