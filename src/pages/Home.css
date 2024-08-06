@@ -1,5 +1,4 @@
 /* HERO SECTION*/
-
 .hero {
   margin: 3rem auto;
 }
@@ -201,7 +200,7 @@ h3 span {
   color: var(--white);
   border: none;
   outline: none;
-  background-color: var(--color--secondary-400);
+  background-color: var(--color--primary-400);
   border-radius: 0.5rem;
   width: 100%;
   text-align: left;
