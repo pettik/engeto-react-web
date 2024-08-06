@@ -1,13 +1,15 @@
 
-.container__app{
-
+.loading_heading{
+    color: var(--color-primary-700);
+    text-align: center;
+    font-size: 2rem;
 }
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 768px) {
     
     .container__app{
-        margin: 0 auto;
+        margin: 3rem auto 1.5rem;
         width: 100%;
         max-width: 900px;
     }
