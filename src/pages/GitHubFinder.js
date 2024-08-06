@@ -1,3 +1,4 @@
+import "./GitHubFinder.css";
 import {useState, useEffect} from "react"
 
 const GitHubFinder = () => {
@@ -12,7 +13,7 @@ const GitHubFinder = () => {
       .then( (data) =>{ 
         console.log(data);
         setLogin(data.login);
-        setLogin(data.login);
+        setName(data.name);
         setLoading(false);
       } )
   })
@@ -25,10 +26,12 @@ const GitHubFinder = () => {
   
   return (
     <section className="container">
-      <h1>GithubUserFinder</h1>
+      <div className="container__app">
+        <h1>GithubUserFinder</h1>
 
-      <h2>{login}</h2>
-      <p>{name}</p>
+        <h2>Login: {login}</h2>
+        <h2>Jméno: {name}</h2>
+      </div>
     </section>
   );
 };
