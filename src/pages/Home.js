@@ -78,22 +78,22 @@ const Home = () => {
     {
       id: 1,
       title: 'Co je GithubUserFinder?',
-      info: 'GithubUserFinder je aplikace pro vyhledávání uživatelů na GitHubu, vytvořená jako závěrečný projekt kurzu "React" na Engeto.cz.',
+      info: 'GithubUserFinder je aplikace pro vyhledávání uživatelů na GitHubu, vytvořená jako závěrečný projekt ke kurzu "React" ve vzdělávacím kurzu od společnosti Engeto.cz.',
     },
     {
       id: 2,
       title: 'Jak používat GithubUserFinder?',
-      info: 'Zadejte uživatelské jméno uživatele z GitHubu do vyhledávacího pole formuláře a klikněte na tlačítko načíst. Aplikace Vám zobrazí detailní informace o uživateli.',
+      info: 'Zadejte uživatelské jméno uživatele z GitHubu do vyhledávacího pole formuláře a klikněte na tlačítko "Načíst data". Aplikace Vám zobrazí detailní informace o uživateli, kterého hledáte.',
     },
     {
       id: 3,
       title: 'Jak funguje úvodní stránka?',
-      info: 'Úvodní stránka obsahuje dynamický text, který se mění náhodně při každém načtení stránky.',
+      info: 'Úvodní stránka obsahuje dynamický text, který se mění náhodně při každém načtení stránky. Tento text můžete nalézt v podnadpise v horní části obrazovky. Zkoušejte načíst znovu stránku a určitě dané místo rychle objevíte.',
     },
     {
       id: 4,
-      title: 'Jaké technologie jsou použity?',
-      info: 'Aplikace je postavena pomocí Reactu a využívá GitHub API pro získávání dat o uživatelích.',
+      title: 'Jaké technologie jsou v použity?',
+      info: 'Aplikace je postavena pomocí Reactu (create-react-app) a využívá API od GitHub.com pro získávání dat o uživatelích. Je tvořená z několika komponent a využívá sadu react-icons (https://react-icons.github.io/react-icons/).',
     },
   ];
 
