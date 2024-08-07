@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -16,6 +17,9 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<SharedLayout />}>
+            <Helmet>
+            <title>GithubUserFinder App</title>
+            </Helmet>
               <Route index element={<Home />} />
               <Route path="about" element={<About />} />
               <Route path="github-profiles" element={<GitHubFinder />} />
