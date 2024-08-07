@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="footer__container">
         <ul>
           <li> 
-            <Link to="/" className="logo">
+            <Link to="/" className="footer__logo">
               <FaGithub className="logo-icon" /> Github<span>UserFinder</span>
             </Link>
         </li>
