@@ -35,7 +35,7 @@ footer {
   color: var(--color-primary-700);
 }
 
-.footer__logo a.logo{
+.footer__container a.footer__logo{
   font-weight: 600;
     font-size: 1.5rem;
 }
