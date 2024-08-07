@@ -19,6 +19,10 @@ footer {
   row-gap:.75rem;
   align-items:center;
   justify-content: center;
+  
+}
+
+.footer__container > ul{
   margin-bottom:1rem;
 }
 
@@ -49,7 +53,7 @@ footer {
   .footer__container ul{
     justify-content: space-around;
     flex-direction: row;
-    
+    align-items: center;
   }
 
   .footer__links{
