@@ -1,62 +1,73 @@
-import './Footer.css';
-import { Link } from 'react-router-dom';
-import { FaDiscord, FaGithubSquare, FaLinkedin } from "react-icons/fa";
-import { FaGithub } from 'react-icons/fa6';
+footer {
+  width: 100%;
+  background-color: var(--color-primary-400);
+  padding:1rem 0;
+}
+
+.footer__container {
+  max-width: 95vh;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--white);
+  font-weight: 400;
+}
+
+.footer__container ul{
+  list-style:none;
+  display:flex;
+  flex-direction: column;
+  row-gap:.75rem;
+  align-items:center;
+  justify-content: center;
+}
 
 
-const Footer = () => {
-  return (
-    <footer>
-      <div className="footer__container">
-        <ul>
-          <li> 
-            <Link to="/" className="footer__logo">
-              <FaGithub className="logo-icon" /> Github<span>UserFinder</span>
-            </Link>
-        </li>
-        <li>
-          <ul className="footer__links">
-            <li>
-            <Link to="/">
-              Domů
-            </Link>
-            </li>
-            <li>
-            <Link to="/github-profiles">
-              GithubUserFinder App
-            </Link>
-            </li>
-            <li>
-            <Link to="/about">
-              O projektu
-            </Link>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <ul className="footer__social">
-            <li>
-              <Link to="/">
-                <FaDiscord />
-              </Link>
-            </li>
-            <li>
-              <Link to="/">
-                <FaGithubSquare />
-              </Link>
-            </li>
-            <li>
-              <Link to="/">
-                <FaLinkedin />
-              </Link>
-            </li>
-          </ul>
-        </li>
-        </ul>
-        <p>2024 &copy; Bednarski P.</p>
-      </div>
-    </footer>
-  );
-};
 
-export default Footer;
+.footer__container > ul{
+  margin-bottom:1rem;
+  row-gap:1.75rem;
+}
+
+.footer__container a{
+  font-weight: 500;
+  transition: color .2s;
+}
+
+.footer__container a:hover{
+  color: var(--color-primary-700);
+}
+
+.footer__container a.footer__logo{
+  font-weight: 600;
+    font-size: 1.5rem;
+}
+
+
+
+.footer__social li a{
+  font-size: 1.5rem;
+}
+
+ul.footer__social{
+  column-gap: 1rem;
+  flex-direction: row;
+}
+
+
+@media screen and (min-width: 768px) {
+  .footer__container {
+    max-width: 900px;
+  }
+
+  .footer__container ul{
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .footer__links{
+    column-gap: 1rem;
+  }
+
+  
+}
