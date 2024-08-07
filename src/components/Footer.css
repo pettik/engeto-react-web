@@ -18,15 +18,22 @@ footer {
   flex-direction: column;
   row-gap:.75rem;
   align-items:center;
+  justify-content: center;
   margin-bottom:1rem;
 }
 
 .footer__container a{
   font-weight: 400;
+  transition: color .2s;
 }
 
-.footer__logo a{
-  font-weight: 800;
+.footer__container a:hover{
+  color: var(--color-primary-700);
+}
+
+.footer__logo a.logo{
+  font-weight: 600;
+    font-size: 1.5rem;
 }
 
 .footer__social li a{
