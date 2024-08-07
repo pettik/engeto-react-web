@@ -6,11 +6,15 @@ import About from './pages/About';
 import GitHubFinder from './pages/GitHubFinder';
 import Error from './pages/Error';
 import SharedLayout from './pages/SharedLayout';
+import { Helmet } from 'react-helmet';
 import './App.css';
 
 function App() {
   return (
     <Router>
+      <Helmet>
+        <title>GithubUserFinder App</title>
+      </Helmet>
       <div className="app-container">
         <Navbar />
         <div className="content">

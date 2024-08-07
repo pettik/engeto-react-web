@@ -167,7 +167,7 @@ h3 span {
   display: flex;
   align-items: center;
   justify-content: center;
- background-color: var(--color-primary-400);
+  background-color: var(--color-primary-400);
   color: var(--white);
   padding: 0.5rem 0.3rem;
   border-radius: 0.5rem;
@@ -213,7 +213,6 @@ h3 span {
   font-size: 1.4rem;
   font-weight: 800;
 }
-
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 768px) {
@@ -290,7 +289,6 @@ h3 span {
   .faq__tabs {
     column-gap: 1.25rem;
     flex-direction: row;
-   
   }
 
   .faq__item h3 {
