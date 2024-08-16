@@ -72,7 +72,7 @@ const GitHubFinder = () => {
               onChange={e => setUsername(e.target.value)}
             />
           </div>
-          <button type="submit">Vyhledat</button>
+          <button className="btn__search" type="submit">Vyhledat</button>
         </form>
 
         {userFound && !loading && (
