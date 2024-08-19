@@ -4,9 +4,9 @@
   font-size: 2rem;
 }
 
-.container__app h1{
+.container__app h1 {
   color: var(--color-primary-700);
-  font-size:2.5rem;
+  font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
 }
@@ -54,11 +54,22 @@
   font-size: 2rem;
 }
 
-.user__primary__info{
-  display:flex;
+.user__primary__info {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+  padding: 1.5rem;
+  background-color: var(--color-primary-200);
+  border-radius: 1rem;
 }
 
-.user__primary__info-name{}
+.user__primary__info-name {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  order: 1;
+  flex: 1;
+}
 
 .user__stats {
   display: flex;
@@ -66,16 +77,19 @@
   margin-top: 10px;
 }
 
+.user__description {
+  margin-top: 10px;
+  font-size: 16px;
+  order: 2;
+  flex: 2.5;
+  text-align: justify;
+}
 .user__avatar {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   margin-top: 20px;
-}
-
-.user__description {
-  margin-top: 10px;
-  font-size: 16px;
+  border: 5px solid var(--color-primary-700);
 }
 
 .repos__wrapper {

@@ -72,22 +72,27 @@ const GitHubFinder = () => {
               onChange={e => setUsername(e.target.value)}
             />
           </div>
-          <button className="btn__search" type="submit">Vyhledat</button>
+          <button className="btn__search" type="submit">
+            Vyhledat
+          </button>
         </form>
 
         {userFound && !loading && (
           <>
-          <div className="user__primary__info">
-          <div className="user__primary__info-name">
-          
-            <h2>Login: {login}</h2>
-            <h2>Jméno: {name}</h2>
-         </div>
-            {avatarUrl && (
-              <img src={avatarUrl} alt="User avatar" className="user__avatar" />
-            )}
-         </div>
-            {bio && <p className="user__description">{bio}</p>}
+            <div className="user__primary__info">
+              <div className="user__primary__info-name">
+                <h2>Login: {login}</h2>
+                <h2>Jméno: {name}</h2>
+              </div>
+              {avatarUrl && (
+                <img
+                  src={avatarUrl}
+                  alt="User avatar"
+                  className="user__avatar"
+                />
+              )}
+              {bio && <p className="user__description">{bio}</p>}
+            </div>
             <div className="user__stats">
               <div>
                 <h3>Sledující: {followers}</h3>
