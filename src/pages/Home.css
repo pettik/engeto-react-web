@@ -89,7 +89,7 @@ h3 span {
 
 /* BENEFITS SECTION */
 .benefits__section {
-  width: 100vw;
+  width: 100%;
   background-color: var(--color--secondary-300);
 }
 
@@ -100,7 +100,7 @@ h3 span {
   justify-content: center;
   row-gap: 2rem;
   max-width: 900px;
-  padding-block: 3rem;
+  padding-block: 1.5rem;
 }
 
 .benefits__container h3 {
@@ -140,7 +140,7 @@ h3 span {
 
 /* FAQ SECTION */
 .faq__section {
-  width: 98vw;
+  width: 100%;
   background-color: var(--white);
 }
 
@@ -163,13 +163,12 @@ h3 span {
 }
 
 .faq__item {
-  padding: 0.5rem 0.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--color-primary-400);
   color: var(--white);
-  padding: 0.5rem 0.3rem;
+  padding: 0.5rem 0.15rem;
   border-radius: 0.5rem;
   border: none;
   outline: none;
