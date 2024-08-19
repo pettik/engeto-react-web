@@ -77,11 +77,16 @@ const GitHubFinder = () => {
 
         {userFound && !loading && (
           <>
+          <div className="user__primary__info">
+          <div className="user__primary__info-name">
+          
             <h2>Login: {login}</h2>
             <h2>Jméno: {name}</h2>
+         </div>
             {avatarUrl && (
               <img src={avatarUrl} alt="User avatar" className="user__avatar" />
             )}
+         </div>
             {bio && <p className="user__description">{bio}</p>}
             <div className="user__stats">
               <div>
