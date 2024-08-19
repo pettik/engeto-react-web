@@ -54,6 +54,12 @@
   font-size: 2rem;
 }
 
+.user__primary__info{
+  display:flex;
+}
+
+.user__primary__info-name{}
+
 .user__stats {
   display: flex;
   justify-content: space-between;
