@@ -29,12 +29,12 @@ const Footer = () => {
           <li>
             <ul className="footer__social">
               <li>
-                <Link to="/">
+                <Link to="https://github.com/pettik">
                   <FaGithubSquare />
                 </Link>
               </li>
               <li>
-                <Link to="/">
+                <Link to="https://www.linkedin.com/in/petr-b-2b433a167">
                   <FaLinkedin />
                 </Link>
               </li>

@@ -18,7 +18,7 @@ const Navbar = () => {
           >
             Domů
           </NavLink>
-          <br />
+
           <NavLink
             to="/github-profiles"
             className={({ isActive }) =>
@@ -27,7 +27,7 @@ const Navbar = () => {
           >
             GithubUserFinder App
           </NavLink>
-          <br />
+
           <NavLink
             to="/about"
             className={({ isActive }) =>
@@ -36,7 +36,6 @@ const Navbar = () => {
           >
             O projektu
           </NavLink>
-          <br />
         </nav>
       </div>
     </header>

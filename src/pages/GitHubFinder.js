@@ -101,7 +101,7 @@ const GitHubFinder = () => {
                 <h3>Sleduje: {following}</h3>
               </div>
             </div>
-            <p>Datum založení účtu: {createdAt}</p>
+            <p className="created">Datum založení účtu: {createdAt}</p>
 
             <h3>Prvních 10 repozitářu uživatele {login} </h3>
             <div className="repos__wrapper">
