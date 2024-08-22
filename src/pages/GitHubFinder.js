@@ -67,7 +67,7 @@ const GitHubFinder = () => {
             <span className="github__heading">github.com/</span>
             <input
               type="text"
-              placeholder="Zadejte GitHub uživatelské jméno"
+              placeholder="Zadejte GitHub username"
               value={username}
               onChange={e => setUsername(e.target.value)}
             />
@@ -101,9 +101,13 @@ const GitHubFinder = () => {
                 <h3>Sleduje: {following}</h3>
               </div>
             </div>
-            <p className="created">Datum založení účtu: {createdAt}</p>
+            <p className="created">
+              Datum založení účtu: <span className="bold">{createdAt}</span>
+            </p>
 
-            <h3>Prvních 10 repozitářu uživatele {login} </h3>
+            <h3>
+              První z repozitářu uživatele <span className="bold">{login}</span>{' '}
+            </h3>
             <div className="repos__wrapper">
               {repos.map(repo => (
                 <a
@@ -116,7 +120,12 @@ const GitHubFinder = () => {
                   <h3>{repo.name}</h3>
                   <p>{repo.description}</p>
                   <p>
-                    Vytvořeno: {new Date(repo.created_at).toLocaleDateString()}
+                    <span className="bold">Vytvořeno:</span>{' '}
+                    {new Date(repo.created_at).toLocaleDateString()}
+                  </p>
+                  <p>
+                    <span className="bold">Upraveno:</span>{' '}
+                    {new Date(repo.updated_at).toLocaleDateString()}
                   </p>
                 </a>
               ))}
@@ -125,7 +134,9 @@ const GitHubFinder = () => {
         )}
 
         {loading && <h2 className="loading_heading">Načítání...</h2>}
-        {error && <h2>Uživatel {username} nenalezen.</h2>}
+        {error && (
+          <h2 className="loading_heading">Uživatel {username} nenalezen :-(</h2>
+        )}
       </div>
     </section>
   );

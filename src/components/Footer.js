@@ -28,6 +28,7 @@ const Footer = () => {
           </li>
           <li>
             <ul className="footer__social">
+              <li>Autor:</li>
               <li>
                 <Link to="https://github.com/pettik">
                   <FaGithubSquare />
