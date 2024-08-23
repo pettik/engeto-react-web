@@ -1,27 +1,16 @@
 # 🇨🇿 GithubUserFinder - Závěrečný projekt kurzu "React" na Engeto.cz
 
 ## Popis projektu
-Tento repozitář obsahuje závěrečný projekt pro kurz "React" poskytovaný společností Engeto. Cílem projektu je vytvořit vícestránkovou React webovou aplikaci, která demonstruje schopnost studenta aplikovat koncepty naučené během kurzu. Projekt bude zkontrolován lektorem, který poskytne zpětnou vazbu. Úspěšné dokončení projektu je podmínkou pro získání certifikace.
+Tento repozitář obsahuje závěrečný projekt pro kurz "React" poskytovaný společností Engeto. Hlavním cílem projektu je vytvořit vícestránkovou React webovou aplikaci, která umožňuje uživatelům vyhledávat informace o uživatelích GitHubu prostřednictvím GitHub API. Uživatelé mohou také zobrazit přehled veřejných repozitářů nalezených uživatelů a prokliknout se přímo na stránku daného repozitáře na GitHubu.
 
-## Požadavky na projekt
-Projekt se skládá ze dvou hlavních stránek s následujícími specifikacemi:
-
-### Stránka 1: Dynamická úvodní stránka
-1. **Sekce záhlaví**:
-   - Obsahuje záhlaví s dynamicky se měnícím textem. Text se mění náhodně při každém načtení stránky.
-   
-2. **Statické komponenty**:
-   - Zahrnuje několik statických komponent, které mohou obsahovat jakýkoli obsah, jako je text a obrázky.
-
-3. **Sekce záložek**:
-   - Obsahuje záložky, které při kliknutí mění obsah zobrazený pod nimi. 
-
-### Stránka 2: Vyhledávání uživatelů na GitHubu
-1. **Formulář**:
-   - Obsahuje formulář, který umožňuje uživatelům zadat uživatelské jméno na GitHubu.
-   
-2. **API dotaz**:
-   - Využívá zadané uživatelské jméno z formuláře k dotazu na veřejné GitHub API. Například: `https://api.github.com/users/pettik`. Získaná data jsou následně zobrazena na stránce.
+## Hlavní vlastnosti aplikace
+- **Vyhledávání uživatelů GitHubu**: Uživatelé mohou zadat uživatelské jméno a získat základní informace o uživateli, jako je profilový obrázek, jméno, bio a počet veřejných repozitářů.
+- **Zobrazení repozitářů**: Aplikace zobrazí seznam veřejných repozitářů daného uživatele, každý z nich slouží jako odkaz na odpovídající stránku repozitáře na GitHubu.
+- **Tři hlavní stránky**:
+  - **Domovská stránka**: Úvodní stránka s možností navigace na další stránky.
+  - **Vyhledávač GitHub uživatelů**: Stránka, kde uživatelé mohou vyhledávat informace o GitHub uživatelích.
+  - **O aplikaci**: Stránka s informacemi o účelu a autorovi aplikace.
+- **Zobrazení chybové stránky**: Pokud uživatel zadá neexistující cestu, aplikace zobrazí chybovou stránku.
 
 ## Jak spustit projekt
 Pro spuštění tohoto projektu lokálně, postupujte podle následujících kroků:
@@ -30,6 +19,7 @@ Pro spuštění tohoto projektu lokálně, postupujte podle následujících kro
    ```bash
    git clone https://github.com/your-username/GithubUserFinder.git
    cd GithubUserFinder
+
 
 ## Nainstalujte závislosti
 Ujistěte se, že máte nainstalovaný Node.js a npm. Poté spusťte:
@@ -47,18 +37,15 @@ Ujistěte se, že máte nainstalovaný Node.js a npm. Poté spusťte:
 npm start
 ```
 
-Tento příkaz spustí vývojový server a otevře aplikaci ve vašem výchozím webovém prohlížeči. Pokud se aplikace neotevře automaticky, můžete ji přistupit na adrese `http://localhost:3000`.
+Tento příkaz spustí vývojový server a otevře aplikaci ve vašem výchozím webovém prohlížeči. Pokud se aplikace neotevře automaticky, můžete ji přistoupit na adrese `http://localhost:3000`.
+
+## Online verze
+Aplikaci můžete také vyzkoušet online na adrese: [https://pettik-engeto.netlify.app/](https://pettik-engeto.netlify.app/). Pro optimální výkon však doporučujeme stáhnout projekt a spustit ho lokálně, protože online verze může občas vykazovat chyby způsobené nesprávně zpracovanými cestami.
+
 
 ## Odevzdání projektu
-- Projekty mohou být odevzdány k recenzi kdykoliv během kurzu a až do 4 měsíců od první lekce.
-- Po odevzdání bude zpětná vazba a hodnocení poskytnuto do 14 dnů prostřednictvím e-mailu.
-- Každý projekt může být přepracován a znovu odevzdán dvakrát. Třetí zamítnutí bude mít za následek neúspěšné získání certifikace.
-
-
-## Ukázka stránek
-### Stránka 1: Dynamická úvodní stránka
-
-### Stránka 2: Vyhledávání uživatelů na GitHubu
+- Projekty mohou být předloženy k revizi prostřednictvím oficiálního kanálu Engeto.
+- Lektor poskytne zpětnou vazbu, která je nezbytná pro získání certifikace.
 
 ## Další zdroje
 - [GitHub API](https://docs.github.com/en/rest/users/users#get-a-user)
@@ -66,30 +53,19 @@ Tento příkaz spustí vývojový server a otevře aplikaci ve vašem výchozím
 -----------------------------------------------------------------------------
 # 🇬🇧 EN:
 
-# GithubUserFinder - Final Project for "React" Course at Engeto
+# 🇬🇧 GithubUserFinder - Final Project of the "React" Course at Engeto.cz
 
 ## Project Description
-This repository contains the final project for the "React" course provided by Engeto. The aim of the project is to create a multi-page React web application that demonstrates the student's ability to apply concepts learned during the course. The project will be reviewed by a tutor, who will provide feedback. Successful completion of the project is a requirement for certification.
+This repository contains the final project for the "React" course provided by Engeto. The main goal of the project is to create a multi-page React web application that allows users to search for GitHub users' information using the GitHub API. Users can also view a list of public repositories for the found users and navigate directly to the repository's page on GitHub.
 
-## Project Requirements
-The project consists of two main pages with the following specifications:
-
-### Page 1: Dynamic Homepage
-1. **Header Section**:
-   - Contains a header with dynamically changing text. The text changes randomly on each page reload.
-   
-2. **Static Components**:
-   - Includes several static components that can contain any content, such as text and images.
-
-3. **Tabs Section**:
-   - Contains tabs that change the displayed content below them when clicked.
-
-### Page 2: GitHub User Search
-1. **Form**:
-   - Contains a form that allows users to input a GitHub username.
-   
-2. **API Request**:
-   - Uses the entered username from the form to query the public GitHub API. For example: `https://api.github.com/users/pettik`. The retrieved data is then displayed on the page.
+## Key Features of the Application
+- **GitHub User Search**: Users can enter a GitHub username to retrieve basic information about the user, such as profile picture, name, bio, and the number of public repositories.
+- **Repository Display**: The application displays a list of public repositories for the specified user, each serving as a link to the corresponding repository page on GitHub.
+- **Three Main Pages**:
+  - **Home Page**: The introductory page with navigation options to other pages.
+  - **GitHub User Finder**: A page where users can search for GitHub users' information.
+  - **About the App**: A page with information about the purpose and author of the application.
+- **Error Page Display**: If a user enters a non-existing route, the application will display an error page.
 
 ## How to Run the Project
 To run this project locally, follow these steps:
@@ -98,6 +74,7 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/your-username/GithubUserFinder.git
    cd GithubUserFinder
+
 
 ## Install Dependencies
 Make sure you have Node.js and npm installed. Then run:
@@ -118,16 +95,14 @@ npm start
 
 This command will start the development server and open the application in your default web browser. If the application does not open automatically, you can access it at http://localhost:3000.
 
+## Online Version
+You can also try the application online at: [https://pettik-engeto.netlify.app/](https://pettik-engeto.netlify.app/). However, for optimal performance, we recommend downloading the project and running it locally, as the online version might occasionally show errors due to incorrectly processed paths.
+
+
 ## Project Submission
-- Projects can be submitted for review at any time during the course and up to 4 months from the first lesson.
-- After submission, feedback and evaluation will be provided within 14 days via email.
-- Each project can be revised and resubmitted twice. A third rejection will result in failure to obtain certification.
+- Projects can be submitted for review through the official Engeto channel.
+- The instructor will provide feedback, which is necessary to obtain certification.
 
-
-## Ukázka stránek
-### Page 1: Dynamic Homepage
-
-### Page 2: GitHub User Search
 
 ## Additional Resources
 - [GitHub API](https://docs.github.com/en/rest/users/users#get-a-user)
