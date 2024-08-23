@@ -1,9 +1,9 @@
 # 🇨🇿 GithubUserFinder - Závěrečný projekt kurzu "React" na Engeto.cz
 
 # Autor:
-  <!- - Jméno a příjmení: Petr Bednarski - ->
-  <!- - E-mail: petrbednarski@seznam.cz - ->
-  <!- - Discord: pettik_ (PetrB) - ->
+- Jméno a příjmení: Petr Bednarski
+- E-mail: petrbednarski@seznam.cz
+- Discord: pettik_ (PetrB)
 
 ## Popis projektu
 Tento repozitář obsahuje závěrečný projekt pro kurz "React" poskytovaný společností Engeto. Hlavním cílem projektu je vytvořit vícestránkovou React webovou aplikaci, která umožňuje uživatelům vyhledávat informace o uživatelích GitHubu prostřednictvím GitHub API. Uživatelé mohou také zobrazit přehled veřejných repozitářů nalezených uživatelů a prokliknout se přímo na stránku daného repozitáře na GitHubu.
