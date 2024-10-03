@@ -52,6 +52,18 @@ Aplikaci můžete také vyzkoušet online na adrese: [https://pettik-engeto.netl
 - Projekty mohou být předloženy k revizi prostřednictvím oficiálního kanálu Engeto.
 - Lektor poskytne zpětnou vazbu, která je nezbytná pro získání certifikace.
 
+## Opravy po prvním hodnocení
+
+Dne 3.10.2024 byl projekt upraven na základě zpětné vazby od hodnotícího lektora. Tyto úpravy zahrnovaly následující body:
+
+1. `Home.js` – Funkce `useCallback` byla odstraněna, protože nebyla potřebná.
+2. `Home.js` – Redundantní `useEffect` byl odstraněn, jelikož stav `title` již přijímal výchozí hodnotu z funkce `getRandomTitle`.
+3. `Home.js` – Komponenta `BenefitItem` byla přesunuta do samostatného souboru pro lepší modularitu.
+4. `GitHubFinder.js` – URL pro repozitáře bylo upraveno, aby využívalo `${userUrl}/repos?per_page=10`.
+5. `GitHubFinder.js` – Přidány detailnější chybové zprávy pro uživatele v UI, aby bylo jasnější, co se stalo.
+6. `GitHubFinder.js` – Místo mnoha stavů (`useState`) byl zaveden jeden stavový objekt pro efektivnější správu dat uživatele.
+
+
 ## Další zdroje
 - [GitHub API](https://docs.github.com/en/rest/users/users#get-a-user)
 
@@ -107,6 +119,17 @@ You can also try the application online at: [https://pettik-engeto.netlify.app/]
 ## Project Submission
 - Projects can be submitted for review through the official Engeto channel.
 - The instructor will provide feedback, which is necessary to obtain certification.
+
+## Fixes after the First Review
+
+On October 3, 2024, the project was updated based on feedback from the reviewing instructor. The updates addressed the following points:
+
+1. `Home.js` – The `useCallback` function was removed as it was unnecessary.
+2. `Home.js` – The redundant `useEffect` was removed since the `title` state was already set to the default value using `getRandomTitle`.
+3. `Home.js` – The `BenefitItem` component was moved to a separate file for better modularity.
+4. `GitHubFinder.js` – The URL for repositories was updated to use `${userUrl}/repos?per_page=10`.
+5. `GitHubFinder.js` – More detailed error messages were added to the UI to make it clearer for the user what went wrong.
+6. `GitHubFinder.js` – Instead of multiple `useState` hooks, a single state object was introduced for more efficient user data management.
 
 
 ## Additional Resources
