@@ -1,6 +1,7 @@
 import './Home.css';
-import { useState, useEffect, useCallback } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import BenefitItem from '../components/BenefitItem';
 import { FaMagnifyingGlass } from 'react-icons/fa6';
 import {
   FaSearch,
@@ -24,17 +25,13 @@ const Home = () => {
     'efektivní',
   ];
 
-  const getRandomTitle = useCallback(() => {
+  const getRandomTitle = () => {
     const randomIndex = Math.floor(Math.random() * appProperties.length);
     const word = appProperties[randomIndex];
     return word.charAt(0).toUpperCase() + word.slice(1);
-  }, []);
+  };
 
   const [title, setTitle] = useState(getRandomTitle());
-
-  useEffect(() => {
-    setTitle(getRandomTitle());
-  }, []);
 
   // BENEFITS SECTION
   const benefits = [
@@ -63,15 +60,6 @@ const Home = () => {
         'Vždy aktuální informace přímo z GitHub API, abyste měli přístup k nejnovějším údajům.',
     },
   ];
-
-  const BenefitItem = ({ icon, title, description }) => (
-    <div className="benefit-item">
-      <div className="benefit-icon">{icon}</div>
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <div className="bottom_line"></div>
-    </div>
-  );
 
   // FAQ SECTION
   const questions = [
