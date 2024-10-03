@@ -31,7 +31,7 @@ const Home = () => {
     return word.charAt(0).toUpperCase() + word.slice(1);
   };
 
-  const [title, setTitle] = useState(getRandomTitle());
+  const [title] = useState(getRandomTitle());
 
   // BENEFITS SECTION
   const benefits = [

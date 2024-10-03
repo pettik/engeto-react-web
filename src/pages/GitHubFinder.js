@@ -3,17 +3,19 @@ import { useState } from 'react';
 
 const GitHubFinder = () => {
   const [loading, setLoading] = useState(false);
-  const [login, setLogin] = useState('');
-  const [name, setName] = useState('');
-  const [avatarUrl, setAvatarUrl] = useState('');
-  const [bio, setBio] = useState('');
-  const [followers, setFollowers] = useState(0);
-  const [following, setFollowing] = useState(0);
-  const [createdAt, setCreatedAt] = useState('');
   const [username, setUsername] = useState('');
   const [error, setError] = useState(false);
   const [userFound, setUserFound] = useState(false);
-  const [repos, setRepos] = useState([]);
+  const [userData, setUserData] = useState({
+    login: '',
+    name: '',
+    avatarUrl: '',
+    bio: '',
+    followers: 0,
+    following: 0,
+    createdAt: '',
+    repos: [],
+  });
 
   const handleSearch = event => {
     event.preventDefault();
@@ -22,7 +24,7 @@ const GitHubFinder = () => {
     }
 
     const userUrl = `https://api.github.com/users/${username}`;
-    const reposUrl = `https://api.github.com/users/${username}/repos?per_page=10`;
+    const reposUrl = `${userUrl}/repos?per_page=10`;
 
     setLoading(true);
     setError(false);
@@ -36,24 +38,38 @@ const GitHubFinder = () => {
           throw new Error('Repositories not found');
         }
 
-        const userData = await userResponse.json();
+        const userDataResponse = await userResponse.json();
         const reposData = await reposResponse.json();
 
-        setLogin(userData.login);
-        setName(userData.name);
-        setAvatarUrl(userData.avatar_url);
-        setBio(userData.bio);
-        setFollowers(userData.followers);
-        setFollowing(userData.following);
-        setCreatedAt(new Date(userData.created_at).toLocaleDateString());
-        setRepos(reposData);
+        setUserData({
+          login: userDataResponse.login,
+          name: userDataResponse.name,
+          avatarUrl: userDataResponse.avatar_url,
+          bio: userDataResponse.bio,
+          followers: userDataResponse.followers,
+          following: userDataResponse.following,
+          createdAt: new Date(userDataResponse.created_at).toLocaleDateString(),
+          repos: reposData,
+        });
         setUserFound(true);
         setLoading(false);
       })
       .catch(error => {
         console.error('Error fetching data:', error);
         setLoading(false);
-        setError(true);
+
+        if (error.message === 'User not found') {
+          setError(
+            'Uživatel nebyl nalezen, zkontrolujte prosím uživatelské jméno.'
+          );
+        } else if (error.message === 'Repositories not found') {
+          setError(
+            'Uživatel byl nalezen, ale nebyly nalezeny žádné repozitáře.'
+          );
+        } else {
+          setError('Došlo k neočekávané chybě. Zkuste to prosím znovu.');
+        }
+
         setUserFound(false);
       });
   };
@@ -81,35 +97,39 @@ const GitHubFinder = () => {
           <>
             <div className="user__primary__info">
               <div className="user__primary__info-name">
-                <h2>Login: {login}</h2>
-                <h2>Jméno: {name}</h2>
+                <h2>Login: {userData.login}</h2>
+                <h2>Jméno: {userData.name}</h2>
               </div>
-              {avatarUrl && (
+              {userData.avatarUrl && (
                 <img
-                  src={avatarUrl}
+                  src={userData.avatarUrl}
                   alt="User avatar"
                   className="user__avatar"
                 />
               )}
-              {bio && <p className="user__description">{bio}</p>}
+              {userData.bio && (
+                <p className="user__description">{userData.bio}</p>
+              )}
             </div>
             <div className="user__stats">
               <div>
-                <h3>Sledující: {followers}</h3>
+                <h3>Sledující: {userData.followers}</h3>
               </div>
               <div>
-                <h3>Sleduje: {following}</h3>
+                <h3>Sleduje: {userData.following}</h3>
               </div>
             </div>
             <p className="created">
-              Datum založení účtu: <span className="bold">{createdAt}</span>
+              Datum založení účtu:{' '}
+              <span className="bold">{userData.createdAt}</span>
             </p>
 
             <h3>
-              První z repozitářu uživatele <span className="bold">{login}</span>{' '}
+              První z repozitářu uživatele{' '}
+              <span className="bold">{userData.login}</span>{' '}
             </h3>
             <div className="repos__wrapper">
-              {repos.map(repo => (
+              {userData.repos.map(repo => (
                 <a
                   key={repo.id}
                   href={repo.html_url}
@@ -134,9 +154,7 @@ const GitHubFinder = () => {
         )}
 
         {loading && <h2 className="loading_heading">Načítání...</h2>}
-        {error && (
-          <h2 className="loading_heading">Uživatel {username} nenalezen :-(</h2>
-        )}
+        {error && <h2 className="loading_heading">{error}</h2>}
       </div>
     </section>
   );
